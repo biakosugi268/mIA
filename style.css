@@ -1,0 +1,77 @@
+:root {
+  --cor-fundo: #F3E8FF;
+  --cor-principal: #FFFFFF;
+  --cor-secundaria: #E0F4FF;
+  --cor-destaque: #D8B4FE;
+  --cor-rosa: #FFD6E8;
+  --cor-texto: #3F3F46;
+}
+
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.caixa-principal {
+  background-color: var(--cor-principal);
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+h1 {
+  color: var(--cor-destaque);
+  margin-bottom: 15px;
+}
+
+button {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto);
+  border: none;
+  border-radius: 15px;
+  padding: 12px;
+  margin: 8px;
+  transition: 0.3s;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--cor-rosa);
+  transform: scale(1.05);
+}
+
+.progresso {
+  background-color: #EDE9FE;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 10px;
+  margin-bottom: 15px;
+}
+
+.barra {
+  background-color: var(--cor-destaque);
+  height: 100%;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+.caixa-resultado {
+  margin-top: 15px;
+  font-weight: bold;
+  color: var(--cor-texto);
+}
